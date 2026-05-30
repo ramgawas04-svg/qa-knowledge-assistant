@@ -1,0 +1,37 @@
+Playwright Framework Guide
+
+Authentication
+
+Authentication uses OAuth tokens.
+Access tokens are refreshed automatically.
+API authentication is handled through request context.
+
+API Testing
+
+API tests use APIRequestContext.
+Common headers are configured globally.
+Test data is generated dynamically.
+
+Smoke Testing
+
+Smoke tests are executed before deployment.
+Smoke tests validate critical user journeys.
+Smoke suite execution takes approximately 10 minutes.
+
+Regression Testing
+
+Regression tests are executed nightly.
+Regression suite covers all major features.
+Results are published to dashboards.
+
+Parallel Execution
+
+Parallel execution is enabled by default.
+Workers are configured through playwright.config.ts.
+Execution speed improves significantly with multiple workers.
+
+Reporting
+
+HTML reports are generated after every run.
+JUnit reports are published to CI pipelines.
+Screenshots are captured on failures.
