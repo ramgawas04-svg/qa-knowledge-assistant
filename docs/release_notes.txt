@@ -1,0 +1,10 @@
+Version 2.1
+
+Added OAuth authentication support.
+Improved reporting dashboards.
+Parallel execution support increased to 10 workers.
+
+Version 2.2
+
+Added retry mechanism for flaky tests.
+Improved test execution speed.

@@ -1,0 +1,9 @@
+Naming Conventions
+
+Test names should clearly describe business scenarios.
+Page objects should follow the Single Responsibility Principle.
+
+Assertions
+
+Use explicit assertions.
+Avoid hard-coded waits.

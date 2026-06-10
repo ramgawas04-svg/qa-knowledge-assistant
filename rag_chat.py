@@ -25,14 +25,33 @@ while True:
         query_embeddings=[query_embedding],
         n_results=2
     )
-
+    print("\n=== RAW RESULTS ===")
+    print(results)
     docs = results["documents"][0]
+    distances = results["distances"][0]
 
+
+    filtered_docs = []
+    
+    for doc, distance in zip(docs, distances):
+        if distance < 0.8:   # experiment with value
+            filtered_docs.append(doc)
+
+    if not filtered_docs:
+        print("No relevant information found.")
+        continue
     # Build context
     context = "\n\n".join(docs)
 
     prompt = f"""
-Answer the question using ONLY the provided context.
+You are a QA documentation assistant.
+
+Answer ONLY using facts explicitly present in the provided context.
+
+Do not add explanations, assumptions, or external knowledge.
+
+If the answer is not fully present in the context, say:
+"The provided documents do not contain additional information."
 
 Context:
 {context}

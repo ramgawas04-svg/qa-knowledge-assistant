@@ -1,0 +1,10 @@
+API Testing
+
+API tests use APIRequestContext.
+Authentication headers are configured globally.
+Mock responses are supported for integration testing.
+
+Error Handling
+
+API failures should be validated using status codes.
+Response schema validation is mandatory.

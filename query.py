@@ -20,7 +20,8 @@ while True:
         query_embeddings=[query_embedding],
         n_results=2
     )
-
+    print("\n=== RAW RESULTS ===")
+    print(results)
     print("\n=== RESULTS ===\n")
 
     docs = results["documents"][0]
@@ -28,6 +29,6 @@ while True:
 
     for i, doc in enumerate(docs):
         print(f"Result {i+1}")
-        print(f"Section: {metas[i]['section']}")
+        print(f"Source: {metas[i]['source']}")
         print(doc)
         print("-" * 50)
